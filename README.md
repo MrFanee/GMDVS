@@ -1,8 +1,8 @@
-<p>List update:</p>
+List update:
 <br>
 <br>
 <br>
-<p>update_01</p>
-<p>- create framework GMDVS</p>
-<p>update_02</p>
-<p>- ??</p>
+update_01
+- create framework GMDVS
+update_02
+- ??
