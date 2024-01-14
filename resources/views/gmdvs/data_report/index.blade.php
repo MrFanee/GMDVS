@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'GMDVS - Input')
+@section('title', 'GMDVS - Report')
 
 @section('css')
 @endsection

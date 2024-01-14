@@ -31,7 +31,7 @@
             </li>
 
             <li class="sub-menu">
-                <a href=""><i class="menu-icon fa fa-sign-out"></i>Log Out </a>
+                <a href="{{ route('logout') }}"><i class="menu-icon fa fa-sign-out"></i>Log Out </a>
             </li>
 
 
