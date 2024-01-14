@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'GMDVS')
+@section('title', 'GMDVS - Input')
 
 @section('css')
 @endsection
@@ -9,7 +9,7 @@
 {{-- widgets --}}
 {{-- @include('layouts.widgets')     --}}
 
-<div>MASUUUKKK  </div>
+<div>input kedatangan  </div>
 
 <script></script>
 @endsection
