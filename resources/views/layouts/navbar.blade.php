@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-sm navbar-default">
     <div id="main-menu" class="main-menu collapse navbar-collapse">
-        <ul class="nav navbar-nav"> 
+        <ul class="nav navbar-nav">
             <li class="sub-menu">
                 <a href="{{ route('dashboard') }}"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
             </li>
@@ -20,13 +20,17 @@
                     <li><i class="fa fa-puzzle-piece"></i><a href="{{ route('master.pic') }}">Data PIC </a></li>
                     <li><i class="fa fa-puzzle-piece"></i><a href="{{ route('master.kendaraan') }}">Data Kendaraan </a></li>
                     <li><i class="fa fa-puzzle-piece"></i><a href="{{ route('master.jadwal') }}">Mapping Jadwal </a></li>
+                    <li><i class="fa fa-puzzle-piece"></i><a href="https://gps.id/v3/monitoring">GPS </a></li>
+                    <li><i class="fa fa-puzzle-piece"></i><a href="https://webreport.pertaminaretail.com/">Pertamina Retail </a></li>
+                    <li><i class="fa fa-puzzle-piece"></i><a href="https://plb3.menlhk.go.id/siraja-2022/login/index/app/siraja">Limbah </a></li>
+                    <li><i class="fa fa-puzzle-piece"></i><a href="https://siinas.kemenperin.go.id/">SIINAS </a></li>
                 </ul>
             </li>
 
             <li class="menu-item-has-children dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cogs"></i>Report</a>
                 <ul class="sub-menu children dropdown-menu">
-                    <li><i class="fa fa-puzzle-piece"></i><a href="{{ route('report.index') }}">Report Data </a></li>                    
+                    <li><i class="fa fa-puzzle-piece"></i><a href="{{ route('report.index') }}">Report Data </a></li>
                 </ul>
             </li>
 
