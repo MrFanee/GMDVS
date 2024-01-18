@@ -29,9 +29,13 @@ Route::get('/dashboard', 'HomeController@index')->name('dashboard');
 Route::get('/input/keberangkatan', 'InputController@keberangkatan')->name('input.keberangkatan');
 Route::get('/input/kedatangan', 'InputController@kedatangan')->name('input.kedatangan');
 
-// master
+// master pic
 Route::get('/master/pic', 'MasterController@pic')->name('master.pic');
+Route::get('/master/pic/datatables', 'MasterController@picDatatables')->name('master.pic.datatables');
+// master kendaraan
 Route::get('/master/kendaraan', 'MasterController@kendaraan')->name('master.kendaraan');
+Route::get('/master/kendaraan/datatables', 'MasterController@vehicleDatatables')->name('master.kendaraan.datatables');
+// master jadwal
 Route::get('/master/jadwal', 'MasterController@jadwal')->name('master.jadwal');
 
 // report
