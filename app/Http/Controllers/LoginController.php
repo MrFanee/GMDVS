@@ -40,7 +40,7 @@ class LoginController extends Controller
             ->first();
         //jika terdata dan sebagai admin user akan dilempar ke home
         if($check){
-            if($check->role == 'admin_toolrepair' || $check->role == 'admin_production' || $check->role == 'admin_it'){
+            if($check->role == 'admin' || $check->role == 'admin1' || $check->role == 'admin3'){
                 Auth::login($check);
 
                 $key = md5("ToolRepairApp");

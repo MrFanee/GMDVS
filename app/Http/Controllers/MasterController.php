@@ -18,6 +18,8 @@ use Datetime;
 
 class MasterController extends Controller
 {
+    // PIC
+
     public function pic(Request $request)
     {
         return view('gmdvs.data_master.master_pic.index');
@@ -41,6 +43,8 @@ class MasterController extends Controller
         }
     }
 
+    // KENDARAAN
+
     public function kendaraan()
     {
         return view('gmdvs.data_master.master_kendaraan.index');
@@ -49,9 +53,9 @@ class MasterController extends Controller
     public function vehicleDatatables(Request $request)
     {
         if ($request->ajax()) {
-            $data = DB::table('vehicle_tbl')->select('id','no_pol','merk','jenis','plant','BBM','tahun','no_mesin',
+            $data = MasterVehicle::select('id','no_pol','merk','jenis','plant','BBM','tahun','no_mesin',
             'no_rangka','delivery_status','due_pajak','due_kir','due_nopol')
-                // ->where('status','=', 'ACTIVE')
+                ->where('status','=', 'ACTIVE')
                 ->get();
 
             return Datatables::of($data)
@@ -64,6 +68,35 @@ class MasterController extends Controller
             ->make(true);
         }
     }
+
+    // SUPPLIER
+
+    public function suplier()
+    {
+        return view('gmdvs.data_master.master_suplier.index');
+    }
+
+    public function suplierDatatables(Request $request)
+    {
+        if ($request->ajax()) {
+            $data = MasterSuplier::select('id','status','cust_code','cust_name','id_do','do_addr1','do_addr2',
+            'do_addr3','do_addr4','created_by','created_date','updated_by','updated_date')
+                ->where('status','=', 'ACTIVE')
+                ->get();
+
+            return Datatables::of($data)
+            // ->rawColumns(['action'])
+            ->editColumn('action', function($data){
+                return view('gmdvs.data_master.master_suplier.action._action',[
+                    'model' => $data,
+                ]);
+            })
+            ->make(true);
+        }
+    }
+
+
+    // JADWAL
 
     public function jadwal()
     {

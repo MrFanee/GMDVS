@@ -21,7 +21,7 @@
 
 <div class="animated fadeIn">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 mt-2">
             <div class="#">
                 <button type="button" class="btn btn-outline-success" id="addModalPic">
                     <i class="fa fa-plus"></i>&nbsp;Tambah Data
@@ -30,7 +30,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-12 mt-3">
+        <div class="col-12 mt-6">
             <div class="card">
                 <div class="card-header">
                     <div class="row">

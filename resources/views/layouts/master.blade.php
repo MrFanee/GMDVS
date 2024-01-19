@@ -17,10 +17,10 @@
     <link rel="stylesheet" href="{{ asset('assets/css/cs-skin-elastic.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
-    <link href="https://cdn.jsdelivr.net/npm/chartist@0.11.0/dist/chartist.min.css" rel="stylesheet">
+    {{-- <link href="https://cdn.jsdelivr.net/npm/chartist@0.11.0/dist/chartist.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/jqvmap@1.5.1/dist/jqvmap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/weathericons@2.1.0/css/weather-icons.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css" rel="stylesheet" /> --}}
 
     <link rel="stylesheet" href="{{ asset('vendor/select2/css/select2.min.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/srtdash/css/bootstrap.min.css') }}">
@@ -112,10 +112,15 @@
     </div>
 
     <!-- Scripts -->
+    {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script> --}}
+    {{-- <script src="{{ asset('vendor/srtdash/js/bootstrap.min.js') }}"></script> --}}
     <script src="{{ asset('assets/dist/jquery.min.js') }}"></script>
     <script src="{{ asset('assets/dist/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets/dist/jquery.matchHeight.min.js') }}"></script>
     <script src="{{ asset('assets/js/main.js') }}"></script>
+
+    {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script> --}}
+
 
     {{-- <script src="{{ asset('vendor/srtdash/js/popper.min.js') }}"></script>
     <script src="{{ asset('vendor/srtdash/js/bootstrap.min.js') }}"></script>

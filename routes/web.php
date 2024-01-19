@@ -35,8 +35,12 @@ Route::get('/master/pic/datatables', 'MasterController@picDatatables')->name('ma
 // master kendaraan
 Route::get('/master/kendaraan', 'MasterController@kendaraan')->name('master.kendaraan');
 Route::get('/master/kendaraan/datatables', 'MasterController@vehicleDatatables')->name('master.kendaraan.datatables');
+// master suplier
+Route::get('/master/suplier', 'MasterController@suplier')->name('master.suplier');
+Route::get('/master/suplier/datatables', 'MasterController@suplierDatatables')->name('master.suplier.datatables');
 // master jadwal
 Route::get('/master/jadwal', 'MasterController@jadwal')->name('master.jadwal');
+// Route::get('/master/jadwal', 'MasterController@jadwalDatatables')->name('master.jadwal');
 
 // report
 Route::get('/report', 'ReportController@index')->name('report.index');

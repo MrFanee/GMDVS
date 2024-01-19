@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'GMDVS - Master Kendaraan')
+@section('title', 'GMDVS - Master Suplier')
 
 @section('css')
 <link rel="stylesheet" type="text/css" href="{{ asset('vendor/Datatables/dataTables.bootstrap4.min.css') }}">
@@ -8,6 +8,8 @@
 <script src="{{asset('vendor/datetimepicker/js/jquery.min.js')}}"></script>
 <script src="{{asset('vendor/datetimepicker/js/moment.min.js')}}"></script>
 <script src="{{asset('vendor/datetimepicker/js/bootstrap-datetimepicker.min.js')}}"></script>
+{{-- <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}"> --}}
+
 
 <style>
     .btn-primary {
@@ -23,18 +25,18 @@
     <div class="row">
         <div class="col-md-12 mt-2">
             <div class="#">
-                <button type="button" class="btn btn-outline-success" id="addModalKendaraan">
+                <button type="button" class="btn btn-outline-success" id="addModalSuplier">
                     <i class="fa fa-plus"></i>&nbsp;Tambah Data
                 </button>
             </div>
         </div>
     </div>
     <div class="row">
-        <div class="col-12 mt-7">
+        <div class="col-12 mt-6">
             <div class="card">
                 <div class="card-header">
                     <div class="row">
-                        <h4 class="card-header-title">Data Kendaraan</h4>
+                        <h4 class="card-header-title">Data Suplier</h4>
                     </div>
                 </div>
                 <div class="card-body">
@@ -46,16 +48,13 @@
                                         <thead class="text-center" style="text-transform: uppercase; font-size: 13px;" >
                                             <tr>
                                                 <th>No</th>
-                                                <th>No Pol</th>
-                                                <th>Merk</th>
-                                                <th>Jenis</th>
-                                                <th>No Mesin</th>
-                                                <th>No Rangka</th>
-                                                <th>BBM</th>
-                                                <th>Plant</th>
-                                                <th>Due Pajak</th>
-                                                <th>Due Kir</th>
-                                                <th>Due Nopol</th>
+                                                <th>Cus Code</th>
+                                                <th>Cus Name</th>
+                                                <th>Do</th>
+                                                <th>Address1</th>
+                                                <th>Address2</th>
+                                                <th>Address3</th>
+                                                <th>Address4</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -74,12 +73,13 @@
 
     <script src="{{ asset('vendor/Datatables/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('vendor/Datatables/dataTables.bootstrap4.min.js') }}"></script>
+
     <script>
         var table1 = $('#master-kendaraan-datatables').DataTable({
             processing: true,
             serverSide: true,
             ajax: {
-                url: "{{ route('master.kendaraan.datatables') }}",
+                url: "{{ route('master.suplier.datatables') }}",
             },
             "columnDefs": [
                 {
@@ -117,18 +117,6 @@
                 {
                 "targets": 8,
                 "className": "text-center",
-                },
-                {
-                "targets": 9,
-                "className": "text-center",
-                },
-                {
-                "targets": 10,
-                "className": "text-center",
-                },
-                {
-                "targets": 11,
-                "className": "text-right",
                 }
             ],
             order: [[ 1, 'desc']],
@@ -140,16 +128,13 @@
                     return meta.row + meta.settings._iDisplayStart + 1;
                 }
             },
-            { data: 'no_pol', name: 'no_pol' },
-            { data: 'merk', name: 'merk' },
-            { data: 'jenis', name: 'jenis' },
-            { data: 'no_mesin', name: 'no_mesin' },
-            { data: 'no_rangka', name: 'no_rangka' },
-            { data: 'BBM', name: 'BBM' },
-            { data: 'plant', name: 'plant' },
-            { data: 'due_pajak', name: 'due_pajak' },
-            { data: 'due_kir', name: 'due_kir' },
-            { data: 'due_nopol', name: 'due_nopol' },
+            { data: 'cust_code', name: 'cust_code' },
+            { data: 'cust_name', name: 'cust_name' },
+            { data: 'id_do', name: 'id_do' },
+            { data: 'do_addr1', name: 'do_addr1' },
+            { data: 'do_addr2', name: 'do_addr2' },
+            { data: 'do_addr3', name: 'do_addr3' },
+            { data: 'do_addr4', name: 'do_addr4' },
             { data: 'action', name: 'action', orderable: false, searchable: false }
             ]
         });

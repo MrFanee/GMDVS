@@ -635,6 +635,8 @@ aside.left-panel {
           width: 55px;
           text-align: left;
           z-index: 9; }
+
+::before {}
         .navbar .navbar-nav li > a .menu-title-text {
           font-size: 14px; }
         .navbar .navbar-nav li > a .badge {
@@ -658,9 +660,10 @@ aside.left-panel {
             border-width: 1px;
             border-color: #607d8b #607d8b transparent transparent;
             -webkit-transform: rotate(45deg);
-                    transform: rotate(45deg);
+            transform: rotate(45deg);
             -webkit-transition: all .25s ease;
-            transition: all .25s ease; }
+            transition: all .25s ease;
+            }
           .navbar .navbar-nav li.menu-item-has-children a:hover:before {
             border-color: #03a9f3 #03a9f3 transparent transparent; }
         .navbar .navbar-nav li.menu-item-has-children .sub-menu {
@@ -679,7 +682,8 @@ aside.left-panel {
             position: absolute;
             left: 0;
             font-size: 14px;
-            top: 9px; }
+            top: 9px;
+            }
           .navbar .navbar-nav li.menu-item-has-children .sub-menu a {
             padding: 2px 0 2px 30px; }
             .navbar .navbar-nav li.menu-item-has-children .sub-menu a:before {
@@ -692,7 +696,8 @@ aside.left-panel {
         .navbar .navbar-nav li.menu-item-has-children.show a:before {
           border-color: transparent #607d8b #607d8b transparent;
           top: 20px;
-          right: -5px; }
+          right: -5px;
+          }
         .navbar .navbar-nav li.menu-item-has-children.show a:hover:before {
           border-color: transparent #03a9f3 #03a9f3 transparent; }
         .navbar .navbar-nav li.menu-item-has-children.show .sub-menu {
