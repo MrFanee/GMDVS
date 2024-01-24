@@ -20,7 +20,7 @@
         "twbs/bootstrap": "^5.3",
         "uxweb/sweet-alert": "^2.0",
         "yajra/laravel-datatables": "^1.5",
-        "yajra/laravel-datatables-oracle": "~9.0"
+        "yajra/laravel-datatables-oracle": "^9.21"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.2",

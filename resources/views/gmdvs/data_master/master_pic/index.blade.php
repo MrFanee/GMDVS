@@ -66,67 +66,81 @@
         </div>
     </div>
 </div>
+@include('gmdvs.data_master.master_pic.modal.create-pic')
 
+{{-- @endsection
+
+@section('script')
+@include('tms.warehouse.wh-to-sc-entry.ajax')
+@endsection
+
+
+@push('js') --}}
     <script src="{{ asset('vendor/Datatables/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('vendor/Datatables/dataTables.bootstrap4.min.js') }}"></script>
     <script>
-        //get data from datatables
-        var table = $('#master-pic-datatables').DataTable({
-            processing: true,
-            serverSide: true,
-            ajax: {
-                url: "{{ route('master.pic.datatables') }}",
-            },
-            "columnDefs": [
-                {
-                "targets": 0,
-                "className": "text-center",
+
+        $(document).on('click', '#addModalPic', function(e) {
+            e.preventDefault();
+            $('#modalpic').modal('show');
+        });
+
+        $(document).ready(function() {
+        // get data from datatables
+            var table11 = $('#master-pic-datatables').DataTable({
+                processing: true,
+                serverSide: true,
+                ajax: {
+                    url: "{{ route('master.pic.datatables') }}",
                 },
-                {
-                "targets": 1,
-                "className": "text-center",
+                "columnDefs": [
+                    {
+                    "targets": 0,
+                    "className": "text-center",
+                    },
+                    {
+                    "targets": 1,
+                    "className": "text-center",
+                    },
+                    {
+                    "targets": 2,
+                    "className": "text-center",
+                    },
+                    {
+                    "targets": 3,
+                    "className": "text-center",
+                    },
+                    {
+                    "targets": 4,
+                    "className": "text-center",
+                    },
+                    {
+                    "targets": 5,
+                    "className": "text-center",
+                    },
+                    {
+                    "targets": 6,
+                    "className": "text-center",
+                    }
+                ],
+                order: [[ 1, 'desc']],
+                responsive: true,
+                columns: [
+                {data: 'no',
+                    name: 'id',
+                    render: function (data, type, row, meta) {
+                        return meta.row + meta.settings._iDisplayStart + 1;
+                    }
                 },
-                {
-                "targets": 2,
-                "className": "text-center",
-                },
-                {
-                "targets": 3,
-                "className": "text-center",
-                },
-                {
-                "targets": 4,
-                "className": "text-center",
-                },
-                {
-                "targets": 5,
-                "className": "text-center",
-                },
-                {
-                "targets": 6,
-                "className": "text-center",
-                }
-            ],
-            order: [[ 1, 'desc']],
-            responsive: true,
-            columns: [
-            {data: 'no',
-                name: 'id',
-                render: function (data, type, row, meta) {
-                    return meta.row + meta.settings._iDisplayStart + 1;
-                }
-            },
-            { data: 'username', name: 'username' },
-            { data: 'name', name: 'name' },
-            { data: 'group', name: 'group' },
-            { data: 'role', name: 'role' },
-            { data: 'handphone', name: 'handphone' },
-            { data: 'action', name: 'action', orderable: false, searchable: false }
-            ]
+                { data: 'username', name: 'username' },
+                { data: 'name', name: 'name' },
+                { data: 'group', name: 'group' },
+                { data: 'role', name: 'role' },
+                { data: 'handphone', name: 'handphone' },
+                { data: 'action', name: 'action', orderable: false, searchable: false }
+                ]
+            });
         });
     </script>
-
-
 {{-- @endpush --}}
-
 @endsection
